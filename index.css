@@ -1,0 +1,226 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background-color: lightgray;
+}
+.header-1 {
+  width: 200px;
+}
+
+.header-2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.main {
+  padding: 10px 200px;
+  position: relative;
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    padding: 10px 100px; /* Reduced padding for tablets */
+  }
+}
+
+/* Media query for screens smaller than 768px (example mobile breakpoint) */
+@media screen and (max-width: 768px) {
+  .main {
+    padding: 10px 20px; /* Further reduced padding for mobile */
+  }
+}
+
+/* Media query for screens smaller than 480px (example small mobile breakpoint) */
+@media screen and (max-width: 480px) {
+  .main {
+    padding: 10px 10px;
+  }
+}
+
+.main-heading-1 {
+  color: blue;
+}
+
+.main-box-1 {
+  padding: 10px;
+  background-color: lightgrey;
+}
+.main-box-1-heading {
+  margin-bottom: 0;
+}
+.main-box-1-para {
+  margin-top: 5px;
+  font-size: 20px;
+}
+.main-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-button-1,
+.main-button-1:hover {
+  background-color: blue;
+  color: white;
+  padding: 10px 12px;
+  font-size: 15px;
+  border-radius: 10%;
+}
+.main-button-1:hover {
+  cursor: pointer;
+}
+
+.asset_description {
+  font-size: 20px;
+  font-size: large;
+  font-weight: bolder;
+}
+.asset_container {
+  width: 400px;
+
+  box-shadow: 2px 2px 2px 2px white;
+  border-radius: 20px;
+  border: 2px solid gray;
+  height: 500px;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+.asset_heading {
+  margin-top: 0;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.asset_button {
+  position: absolute;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+}
+.asset_button:hover {
+  cursor: pointer;
+}
+.asset_para {
+  margin-left: 10px;
+}
+.asset_thread_box {
+  margin-left: 10px;
+}
+.asset_thread_box-text {
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  margin-top: 0;
+}
+.main_asset-container {
+  margin-top: 70px;
+  gap: 50px;
+  margin-left: 150px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 200px));
+}
+@media screen and (max-width: 1800px) {
+  .main_asset-container {
+    margin-left: 10px; /* Reduced padding for tablets */
+    grid-template-columns: repeat(auto-fit, minmax(400px, 200px));
+  }
+}
+@media screen and (max-width: 1400px) {
+  .main_asset-container {
+    margin-left: 100px; /* Reduced padding for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_asset-container {
+    margin-left: 60px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main_asset-container {
+    padding: 10px 10px;
+  }
+}
+.side_box {
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: lightgray;
+  border-bottom-right-radius: 16px;
+  transition: all 0.3s ease-in-out; /* Added transition */
+}
+
+.side_box-head {
+  position: relative;
+  padding: 20px;
+  color: white;
+  background-color: black;
+  border-top-right-radius: 10px;
+}
+
+.side_box-head-heading {
+  text-align: center;
+}
+
+.side_box-head-button {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* State when side box is collapsed */
+.side_box.collapsed {
+  width: 50px; /* Or the desired width for the collapsed state */
+}
+
+.side_box.collapsed .side_box-content {
+  display: none; /* Hide the content when collapsed */
+}
+
+.side_box.collapsed .side_box-head-heading {
+  opacity: 0;
+}
+.side_box.collapsed .side_box-head-button {
+  transform: rotate(180deg);
+  right: 0; /* Rotate the button to indicate state change */
+}
+
+.notice_board {
+  width: 50px;
+  height: 320px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid black;
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  background-color: #f0f0f0;
+}
+.notice_board-head {
+  width: 10px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.notice_board-head-cross {
+  width: 15px;
+  transform: translateX(-3px);
+}
